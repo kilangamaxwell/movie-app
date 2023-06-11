@@ -2,6 +2,7 @@ import random
 import codecs
 import requests
 import json
+import csv
 
 FILE_HTML = "masterschool\movie-app\_static\index_template.html"
 MOVIE_HTML = "masterschool\movie-app\movies.html"
@@ -206,7 +207,7 @@ class MovieApp:
         rand_movie = random.choice(movies_lst)
         print(
             f"Your movie for tonight: {rand_movie['Title']}, it's rated {rand_movie['Rating']}")
-        self.return_to_menu(self)
+        self.return_to_menu()
 
     def _command_search_movie(self):
         """Search for movie titles using full title or substrings"""
